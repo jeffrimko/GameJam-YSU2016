@@ -1,0 +1,29 @@
+= NOTES: Game Jam YSU 2016
+
+== Misc
+  - '201604031026': Naming game "Breakout". Working on main menu as finishing touch. May add audio if there is time.
+  - '201604031325': Published final build. Thinking about putting project on Github. Preparing project using instructions found http://stackoverflow.com/questions/21573405/how-to-prepare-a-unity-project-for-git[here].
+
+== Mechanics
+  - '201604022032': Game is fairly playable. Thinking about adding ability to pick up randomly placed bonus point objects that only last for a limited amount of time.
+
+== Resources
+  - '201604011949': SFB Games - chip tone music
+
+== Unity - Things To Investigate
+  - '201604012207': In this example, where is the type for `public Missile missilePrefab;` defined? Is using Missile better than GameObject?: http://docs.unity3d.com/ScriptReference/Object.Instantiate.html
+
+== Unity - Spawn Objects
+  - '201604012107': Info on instantiating prefabs: http://docs.unity3d.com/Manual/InstantiatingPrefabs.html
+
+== Unity - Ignore Collisions
+  - '201604020214': Info on collision layers and other methods: http://gamedev.stackexchange.com/questions/75782/how-to-ignore-collision-between-two-objects
+  - '201604020217': More complex info on collision layers: http://gamedev.stackexchange.com/questions/31514/ignore-collisions-with-some-objects-in-certain-contexts
+
+== Unity - Lights Out When Reload (Issue)
+  - '201604020928': Info about light maps but appears obsolete: http://answers.unity3d.com/questions/919940/applicationloadlevel-changes-lighting-for-some-rea.html
+  - '201604020930': Fixed by going to `Window->Lighting->Lightmaps`, disabling `Auto`, and manually building.
+
+== Unity - Scope Keeping
+  - '201604021514': Running into issue where prefab obstacles cannot have a script with a public member that is an game object instance. The first method I tried was very messy; think the better way is to update the obstacle script to find instance of the score keeper object at runtime.
+  - '201604021536': The method of getting the instance previously mentioned worked well.
